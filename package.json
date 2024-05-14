@@ -1,0 +1,59 @@
+{
+  "name": "scimgateway",
+  "version": "4.5.1",
+  "description": "Using SCIM protocol as a gateway for user provisioning to other endpoints",
+  "author": "Jarle Elshaug <jarle.elshaug@gmail.com> (https://elshaug.xyz)",
+  "homepage": "https://elshaug.xyz",
+  "license": "MIT",
+  "main": "lib/scimgateway.js",
+  "scripts": {
+    "postinstall": "node lib/postinstall.js",
+    "start": "node index.js",
+    "test": "mocha -R spec ./test"
+  },
+  "bin": {
+    "scimgateway": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jelhub/scimgateway.git"
+  },
+  "keywords": [
+    "scim",
+    "gateway",
+    "stream",
+    "iga",
+    "provisioning",
+    "entra"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@godaddy/terminus": "^4.12.1",
+    "callsite": "^1.0.0",
+    "dot-object": "^2.1.4",
+    "fold-to-ascii": "^5.0.1",
+    "https-proxy-agent": "^7.0.4",
+    "is-in-subnet": "^4.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.15.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^12.0.1",
+    "ldapjs": "^3.0.7",
+    "lokijs": "^1.5.12",
+    "mongodb": "^6.5.0",
+    "nats": "^2.19.0",
+    "node-machine-id": "1.1.9",
+    "nodemailer": "^6.9.13",
+    "passport": "^0.7.0",
+    "passport-azure-ad": "^4.3.5",
+    "tedious": "^18.1.0",
+    "winston": "^3.12.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^9.2.0",
+    "supertest": "^6.3.3"
+  }
+}

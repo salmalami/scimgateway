@@ -1,0 +1,347 @@
+{
+  "scimgateway": {
+    "port": 8890,
+    "localhostonly": false,
+    "payloadSize": null,
+    "scim": {
+      "version": "2.0",
+      "skipTypeConvert": false,
+      "skipMetaLocation": false,
+      "usePutSoftSync": false,
+      "usePutGroupMemberOfUser": false
+    },
+    "log": {
+      "loglevel": {
+        "file": "debug",
+        "console": "error"
+      },
+      "customMasking": null
+    },
+    "auth": {
+      "bearerOAuth": [
+        {
+          "client_id": "test",
+          "client_secret": "M2I4NDE0ZGEyZGRmODA3NWE2ODI4ODQ0NTVkOThmNWU6ZjMxYzI1ZDliODYyOWIyYzBlMTY3YjcxMWJlMjc5OTc=",
+          "readOnly": false,
+          "baseEntities": []
+        }
+      ],
+      "passThrough": {
+        "enabled": false,
+        "readOnly": false,
+        "baseEntities": []
+      }
+    },
+    "certificate": {
+      "key": null,
+      "cert": null,
+      "ca": null,
+      "pfx": {
+        "bundle": null,
+        "password": null
+      }
+    },
+    "ipAllowList": [],
+    "emailOnError": {
+      "smtp": {
+        "enabled": false,
+        "host": null,
+        "port": 587,
+        "proxy": null,
+        "authenticate": true,
+        "username": null,
+        "password": null,
+        "sendInterval": 15,
+        "to": null,
+        "cc": null
+      }
+    }
+  },
+  "endpoint": {
+    "entity": {
+      "undefined": {
+        "baseUrls": [
+          "https://training060524cpam100v23sptgf-us-east-1-10064245223.saviyntcloud.com/ECM/api/v5"
+        ],
+        "tokenAuth": {
+          "tokenUrl": "https://training060524cpam100v23sptgf-us-east-1-10064245223.saviyntcloud.com/ECM/api/login",
+          "username": "admin",
+          "password": "M2UxNTUwMmFjZWFlODBiZDQzNDE5YTZlMTJjNjBkZTA6OTQ4MTYzYjEzNjhhM2U4ZDQ1NGMzMDM3NDM0NGU2OTU="
+        }
+      }
+    },
+    "map": {
+      "user": {
+        "username": {
+          "mapTo": "userName",
+          "type": "string"
+        },
+        "firstname": {
+          "mapTo": "name.firstName",
+          "type": "string"
+        },
+        "lastname": {
+          "mapTo": "name.familyName",
+          "type": "string"
+        },
+        "preferredfirstname":{
+          "mapTo": "preferredfirstname",
+          "type": "string"
+        },
+        "customproperty14":{
+          "mapTo": "preferredlastname",
+          "type": "string"
+        },
+        "email":{
+          "mapTo": "emails.value",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status":{
+          "mapTo": "active",
+          "type": "boolean"
+        },
+        "employeeType":{
+          "mapTo": "userType",
+          "type": "string"
+        },
+        "jobCode":{
+          "mapTo": "jobCode",
+          "type": "string"
+        },
+        "jobcodedesc":{
+          "mapTo": "jobCodeDesc",
+          "type": "string"
+        },
+        "title":{
+          "mapTo": "title",
+          "type": "string"
+        },
+        "departmentNumber":{
+          "mapTo": "departmentCode",
+          "type": "string"
+        },
+        "departmentname":{
+          "mapTo": "department",
+          "type": "string"
+        },
+        "organizationname":{
+          "mapTo": "organization",
+          "type": "string"
+        },
+        "organizationowner":{
+          "mapTo": "organizationOwner",
+          "type": "string"
+        },
+        "companyname":{
+          "mapTo": "company",
+          "type": "string"
+        },
+        "enddate":{
+          "mapTo": "enddate",
+          "type": "Date"
+        },
+        "startdate":{
+          "mapTo": "startDate",
+          "type": "Date"
+        },
+        "locationnumber":{
+          "mapTo": "locationNumber",
+          "type": "string"
+        },
+        "entity":{
+          "mapTo": "division",
+          "type": "string"
+        },
+        "orgunitid":{
+          "mapTo": "organizationId",
+          "type": "string"
+        },
+        "customproperty12":{
+          "mapTo": "name.honorificPrefix",
+          "type": "string"
+        },
+        "costcenter":{
+          "mapTo": "costCenter",
+          "type": "string"
+        },
+        "manager":{
+          "mapTo": "manager.value",
+          "type": "string"
+        },
+        "street":{
+          "mapTo": "street",
+          "type": "string"
+        },
+        "city":{
+          "mapTo": "city",
+          "type": "string"
+        },
+        "state":{
+          "mapTo": "null",
+          "type": "string"
+        },
+        "country":{
+          "mapTo": "country",
+          "type": "string"
+        },
+        "customproperty1":{
+          "mapTo": "authoritativeSource",
+          "type": "string"
+        },
+        "customproperty2":{
+          "mapTo": "localHrIdentifier",
+          "type": "string"
+        },
+        "customproperty3":{
+          "mapTo": "birthDate",
+          "type": "Date"
+        },
+        "customproperty4":{
+          "mapTo": "organizationLabel",
+          "type": "string"
+        },
+        "customproperty5":{
+          "mapTo": "phoneNumbers.value",
+          "type": "string"
+        },
+        "customproperty6":{
+          "mapTo": "phoneNumbers.value",
+          "type": "string"
+        },
+        "customproperty7":{
+          "mapTo":"null",
+          "type": "string"
+        },
+        "customproperty8":{
+          "mapTo": "null",
+          "type": "string"
+        },
+        "customproperty9":{
+          "mapTo": "managerLocalId",
+          "type": "string"
+        },
+        "customproperty10":{
+          "mapTo": "professionalFamily",
+          "type": "string"
+        },
+        "phoneNumber":{
+          "mapTo": "phoneNumbers.value",
+          "type": "string"
+        },
+        "customproperty56":{
+          "mapTo": "windowsId",
+          "type": "string"
+        },
+        "customproperty22":{
+          "mapTo": "longTermLeave",
+          "type": "string"
+        },
+        "customproperty11":{
+          "mapTo": "office",
+          "type": "string"
+        },
+        "customproperty13":{
+          "mapTo": "digitalWorkplace",
+          "type": "string"
+        },
+        "customproperty26":{
+          "mapTo": "externalCompany",
+          "type": "string"
+        },
+        "customproperty27":{
+          "mapTo": "externalId",
+          "type": "string"
+        },
+        "customproperty47":{
+          "mapTo": "gadId",
+          "type": "string"
+        },
+        "customproperty48":{
+          "mapTo": "gadOu",
+          "type": "string"
+        }
+      },
+      "group":{
+        "entitlement_value":{
+          "mapTo": "entitlementValue",
+          "type": "string"
+        },
+        "entitlementType":{
+          "mapTo": "entitlementType",
+          "type": "string"
+        },
+        "securitysystem":{
+          "mapTo": "securitySystem",
+          "type": "string"
+        },
+        "endpoint":{
+          "mapTo": "endpoint",
+          "type": "string"
+        },
+        "description":{
+          "mapTo": "description",
+          "type": "string"
+        },
+        "displayname":{
+          "mapTo": "displayName",
+          "type": "string"
+        },
+        "updatedate":{
+          "mapTo": "updateDate",
+          "type": "date"
+        },
+        "updatedateUTC":{
+          "mapTo": "updateDateUtc",
+          "type": "string"
+        },
+        "entitlement_glossary":{
+          "mapTo": "entitlementGlossary",
+          "type": "string"
+        },
+        "soxcritical":{
+          "mapTo": "soxCritical",
+          "type": "string"
+        },
+        "syscritical":{
+          "mapTo": "sysCritical",
+          "type": "string"
+        },
+        "status":{
+          "mapTo": "status",
+          "type": "string"
+        },
+        "risk":{
+          "mapTo": "risk",
+          "type": "string"
+        },
+        "privileged":{
+          "mapTo": "privileged",
+          "type": "string"
+        },
+        "financial":{
+          "mapTo": "financial",
+          "type": "string"
+        },
+        "module":{
+          "mapTo": "module",
+          "type": "string"
+        },
+        "access":{
+          "mapTo": "access",
+          "type": "string"
+        },
+        "owner":{
+          "mapTo": "owner",
+          "type": "string"
+        },
+        "customproperty1":{
+          "mapTo": "userName",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
